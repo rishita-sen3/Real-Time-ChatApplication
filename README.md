@@ -1,94 +1,82 @@
-# Real-Time Chat Application 💬
+# Real-Time Chat & Project Collaboration App
 
-A full-stack real-time chat application built with **Node.js, Express, Redis, Socket.IO, and React**.  
-It allows users to join chat rooms, send and receive messages instantly, and manage chat history.
+A full-stack application for **real-time chat, project collaboration, and AI-assisted tasks**.  
+This project allows users to create projects, collaborate with team members, chat in real-time, manage files, and even use AI to assist in tasks and coding.
 
----------------------------------------------------------------------------------------
+---
 
-## 🚀 Features
-- Real-time messaging with Socket.IO
-- Join chat rooms with unique IDs
-- Display online/offline status of users
-- Chat history storage with Redis
-- Scalable backend with Express
-- React frontend with routing & context
-- Clean UI with modern components
+## 📝 Project Definition
 
----------------------------------------------------------------------------------------
+This app enables multiple users to work together on projects with real-time updates. Key functionalities include:  
 
-## 🛠 Tech Stack
-**Frontend:**
-- React (Vite + React Router)
-- Context API for state management
-- Axios for API requests
-- TailwindCSS / ShadCN UI (if used) for styling
+- User authentication & authorization  
+- Project creation, collaboration & management  
+- Real-time messaging using **Socket.IO**  
+- AI integration for task assistance & code suggestions  
+- File tree structure & code editor for project files  
+- Run projects in a web container environment  
+- Prompt engineering for AI responses  
 
-**Backend:**
-- Node.js + Express.js
-- Socket.IO for real-time communication
-- Redis for message storage / pub-sub
-- Morgan for logging
-- dotenv for environment variables
+---
 
----------------------------------------------------------------------------------------
+## ⚡ Features
 
-## 📂 Project Structure
-```
+- **User Authentication:** Login, register, logout with Redis session management  
+- **Project Management:** Create projects, add collaborators, view project details  
+- **Real-Time Messaging:** Chat with collaborators inside projects  
+- **AI Assistance:** GPT-based AI for task help and prompt-based responses  
+- **File Management:** File tree, code editor with syntax highlighting  
+- **Run Projects:** Execute code in a web container within the app  
 
-Real-Time-ChatApplication/
-│── backend/
-│   ├── db/            # Database/Redis connection
-│   ├── routes/        # Express routes
-│   ├── server.js      # Main backend server
-│   └── package.json   # Backend dependencies
-│
-│── frontend/
-│   ├── src/
-│   │   ├── components/ # React components
-│   │   ├── context/    # User/Chat context
-│   │   ├── routes/     # React Router routes
-│   │   └── App.jsx     # Main React App
-│   └── package.json    # Frontend dependencies
-│
-│── README.md          # Project documentation
+---
 
-````
+## 🛠️ Technology Stack
 
----------------------------------------------------------------------------------------
+**Backend:**  
+- Node.js + Express  
+- MongoDB / Mongoose  
+- Redis for session management  
+- Socket.IO for real-time communication  
+- AI Integration (Gemini API / OpenAI)  
 
-## ⚙️ Installation & Setup
+**Frontend:**  
+- React + Vite  
+- React Router DOM  
+- Context API for state management  
+- Code editor integration (Monaco / custom editor)  
 
-### 1. Clone the repository
+---
+
+## 🚀 Setup Instructions
+
+1. Clone the repository:
 ```bash
-git clone https://github.com/rishita-sen3/Real-Time-ChatApplication.git
-cd Real-Time-ChatApplication
+git clone <repo-url>
+cd <project-folder>
 ````
 
-### 2. Setup Backend
+2. Install backend dependencies:
 
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file inside `backend/` with:
+3. Setup `.env` file with:
 
-```env
-PORT=5000
-REDIS_URL=redis://localhost:6379
+```
+MONGO_URI=<your-mongodb-uri>
+REDIS_URL=<your-redis-url>
+AI_API_KEY=<your-ai-key>
 ```
 
-Run backend:
+4. Run backend server:
 
 ```bash
-npm start
+npm run dev
 ```
 
---------------------------------------------------------------------------------------
-
-### 3. Setup Frontend
-
-Open a new terminal:
+5. Install frontend dependencies:
 
 ```bash
 cd frontend
@@ -96,28 +84,7 @@ npm install
 npm run dev
 ```
 
-The frontend will run on:
-👉 `http://localhost:5173`
+6. Open browser at `http://localhost:5173`
 
-The backend will run on:
-👉 `http://localhost:5000`
-
----------------------------------------------------------------------------------------
-
-## 🔮 Future Improvements
-
-* User authentication (login/signup with JWT)
-* Persistent message storage in MongoDB
-* Private chat between two users
-* Typing indicators, read receipts
-* File/image sharing
-
----------------------------------------------------------------------------------------
-
-## 👩‍💻 Author
-
-**Rishita Sen**
-📌 [GitHub](https://github.com/rishita-sen3)
-
-```
+---
 
